@@ -4,16 +4,14 @@
 
 
 bool checkPrime(uint64_t value) {
-  if(value == 0 || value == 1) {
+  if (value == 0 || value == 1) {
     return false;
   }
   else {
-    for(int i = 2; i <= value; ++i) {
-      if(value % i == 0) {
+    for (int i = 2; i <= value; ++i) {
+      if (value % i == 0) {
         return false;
-      }
-    
-      else {
+      } else {
         return true;
       }
     }
@@ -41,8 +39,8 @@ uint64_t nextPrime(uint64_t value) {
 
 uint64_t sumPrime(uint64_t hbound) {
   int sum = 0;
-  for(int i = 2; i < hbound; i++) {
-    if(checkPrime(i) == true)
+  for (int i = 2; i < hbound; i++) {
+    if (checkPrime(i) == true)
       sum = sum + i;
   }
   return sum;
