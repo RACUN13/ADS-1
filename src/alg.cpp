@@ -4,7 +4,7 @@
 
 
 bool checkPrime(uint64_t value) {
-  for (int i = 2; i * i <= value; i++) {
+  for (int i = 2; i * i <= value; ++i) {
     if (value % i == 0) {
       return false;
     }
@@ -13,14 +13,15 @@ bool checkPrime(uint64_t value) {
 }
 
 uint64_t nPrime(uint64_t n) {
-  int value = 2;
+  int value = 0;
   int bre = 0;
-  while (bre < n) {
-    if (checkPrime(value++)) {
-      bre++;
+  for (int i = 2; bre < n; ++i) {
+        if (checkPrime(i) == true) {
+          value = i;
+          bre++;
+        }
     }
-  }
-  return --value;
+    return value;
 }
 
 uint64_t nextPrime(uint64_t value) {
