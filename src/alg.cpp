@@ -20,8 +20,8 @@ uint64_t nPrime(uint64_t n) {
           value = i;
           bre++;
         }
-    }
-    return value;
+  }
+  return value;
 }
 
 uint64_t nextPrime(uint64_t value) {
